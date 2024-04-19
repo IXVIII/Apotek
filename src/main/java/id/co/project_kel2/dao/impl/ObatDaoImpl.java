@@ -36,4 +36,22 @@ public class ObatDaoImpl implements ObatDao {
         }
         return obatVos;
     }
+
+    @Override
+    public ObatVo getObatById(int id) {
+        Iterable<Obat> obats = obatRepository.findAll();
+        for (Obat obat : obats){
+            if (obat.getObt_id() == id){
+                ObatVo obatVo = new ObatVo(obat);
+                return obatVo;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteObat(int id) {
+        obatRepository.deleteById(id);
+    }
+
 }

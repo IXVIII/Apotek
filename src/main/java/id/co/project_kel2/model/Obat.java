@@ -19,8 +19,8 @@ public class Obat {
     @Column(name = "obt_kegunaan")
     private String obt_kegunaan;
 
-    @Column(name = "obt_hrgJual")
-    private BigDecimal obt_hrgJual;
+    @Column(name = "obt_hrg_jual")
+    private BigDecimal obt_hrg_jual;
 
     @Column(name = "obt_stok")
     private Integer obt_stok;
@@ -31,12 +31,12 @@ public class Obat {
     public Obat() {
     }
 
-    public Obat(Integer obt_id, String obt_nama, String obt_kegunaan, BigDecimal obt_hrgJual,
-                 Integer obt_stok, Integer obt_status) {
+    public Obat(Integer obt_id, String obt_nama, String obt_kegunaan, BigDecimal obt_hrg_jual,
+                Integer obt_stok, Integer obt_status) {
         this.obt_id = obt_id;
         this.obt_nama = obt_nama;
         this.obt_kegunaan = obt_kegunaan;
-        this.obt_hrgJual = obt_hrgJual;
+        this.obt_hrg_jual = obt_hrg_jual;
         this.obt_stok = obt_stok;
         this.obt_status = obt_status;
     }
@@ -65,12 +65,12 @@ public class Obat {
         this.obt_kegunaan = obt_kegunaan;
     }
 
-    public BigDecimal getObt_hrgJual() {
-        return obt_hrgJual;
+    public BigDecimal getObt_hrg_jual() {
+        return obt_hrg_jual;
     }
 
-    public void setObt_hrgJual(BigDecimal obt_hrgJual) {
-        this.obt_hrgJual = obt_hrgJual;
+    public void setObt_hrg_jual(BigDecimal obt_hrg_jual) {
+        this.obt_hrg_jual = obt_hrg_jual;
     }
 
     public Integer getObt_stok() {

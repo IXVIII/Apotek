@@ -9,7 +9,7 @@ public class ObatVo
     private Integer id;
     private String nama;
     private String kegunaan;
-    private BigDecimal hrgJual;
+    private BigDecimal harga;
     private Integer stok;
     private Integer status;
 
@@ -21,7 +21,7 @@ public class ObatVo
         this.id = obat.getObt_id();
         this.nama = obat.getObt_nama();
         this.kegunaan = obat.getObt_kegunaan();
-        this.hrgJual = obat.getObt_hrgJual();
+        this.harga = obat.getObt_hrg_jual();
         this.stok = obat.getObt_stok();
         this.status = obat.getObt_status();
     }
@@ -50,12 +50,12 @@ public class ObatVo
         this.kegunaan = kegunaan;
     }
 
-    public BigDecimal getHrgJual() {
-        return hrgJual;
+    public BigDecimal getHarga() {
+        return harga;
     }
 
-    public void setHrgJual(BigDecimal hrgJual) {
-        this.hrgJual = hrgJual;
+    public void setHarga(BigDecimal harga) {
+        this.harga = harga;
     }
 
     public Integer getStok() {

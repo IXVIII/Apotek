@@ -5,6 +5,7 @@ import id.co.project_kel2.model.Obat;
 import id.co.project_kel2.repository.ObatRepository;
 import id.co.project_kel2.response.DtoResponse;
 import id.co.project_kel2.service.ObatService;
+import id.co.project_kel2.vo.ObatVo;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,16 +62,12 @@ public class ObatServiceImpl implements ObatService {
     }
 
     @Override
-    public DtoResponse deleteObat (Obat obat) {
-        Obat obatData = obatRepository.findById(obat.getObt_id()).orElseThrow();
-        if(obatData != null) {
-            try {
-                obatRepository.delete(obat);
-                return new DtoResponse (200, obatData, mDeleteSuccess);
-            } catch (Exception e) {
-                return new DtoResponse(500, obatData, mDeleteFailed);
-            }
-        }
-        return new DtoResponse (404, null, mNotFound);
+    public void deleteObat (int id) {
+        obatDao.deleteObat(id);
+
+    }
+    @Override
+    public ObatVo getObatById(int id) {
+        return obatDao.getObatById(id);
     }
 }
