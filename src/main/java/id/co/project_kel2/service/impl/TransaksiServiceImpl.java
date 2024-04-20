@@ -1,17 +1,14 @@
 package id.co.project_kel2.service.impl;
 
-import id.co.project_kel2.dao.PenjualanDao;
-import id.co.project_kel2.model.DetailPenjualan;
-import id.co.project_kel2.model.DetailPenjualanPK;
+import id.co.project_kel2.dao.TransaksiDao;
 import id.co.project_kel2.model.Obat;
-import id.co.project_kel2.model.Penjualan;
-import id.co.project_kel2.repository.DetailPenjualanRepository;
+import id.co.project_kel2.model.Transaksi;
+import id.co.project_kel2.repository.DetailTransaksiRepository;
 import id.co.project_kel2.repository.ObatRepository;
-import id.co.project_kel2.repository.PenjualanRepository;
+import id.co.project_kel2.repository.TransaksiRepository;
 import id.co.project_kel2.response.DtoResponse;
-import id.co.project_kel2.service.PenjualanService;
-import id.co.project_kel2.vo.DetailPenjualanVo;
-import id.co.project_kel2.vo.PenjualanVo;
+import id.co.project_kel2.service.TransaksiService;
+import id.co.project_kel2.vo.TransaksiVo;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,31 +17,31 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-import static id.co.project_kel2.constant.ObatConstant.*;
-
 @Service
 @Transactional
-public class PenjualanServiceImpl implements PenjualanService {
+public class TransaksiServiceImpl implements TransaksiService {
     @Autowired
-    private PenjualanDao transaksiDao;
+    private TransaksiDao transaksiDao;
 
     @Autowired
-    private PenjualanRepository penjualanRepository;
+    private TransaksiRepository penjualanRepository;
     @Autowired
-    private DetailPenjualanRepository detailPenjualanRepository;
+    private DetailTransaksiRepository detailTransaksiRepository;
     @Autowired
     private ObatRepository obatRepository;
-
+    @Autowired
+    private DetailTransaksiServiceImpl detailTransaksiService;
+/*
     @Override
-    public DtoResponse savePenjualan(PenjualanVo penjualanVo) {
+    public DtoResponse savePenjualan(TransaksiVo penjualanVo) {
         Date tanggal = new Date();
 
-        Penjualan penjualan = new Penjualan();
+        Transaksi penjualan = new Transaksi();
         penjualan.setTrs_tanggal(tanggal);
 
         List<DetailPenjualanVo> detailPenjualanVos = penjualanVo.getDetails();
 
-        Penjualan savedPenjualan = penjualanRepository.save(penjualan);
+        Transaksi savedPenjualan = penjualanRepository.save(penjualan);
 
         BigDecimal total = BigDecimal.ZERO;
         for (DetailPenjualanVo detailVo : detailPenjualanVos) {
@@ -68,7 +65,11 @@ public class PenjualanServiceImpl implements PenjualanService {
 
         return new DtoResponse(200, savedPenjualan, "Penjualan berhasil disimpan.");
 
+
+
     }
+
+         */
 
 
 }

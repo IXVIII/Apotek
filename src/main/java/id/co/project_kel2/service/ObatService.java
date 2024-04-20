@@ -9,7 +9,9 @@ public interface ObatService {
     DtoResponse getObatActive();
     DtoResponse saveObat(Obat obat);
     DtoResponse updateObat(Obat obat);
-    void deleteObat(int id);
-    ObatVo getObatById(int id);
+    DtoResponse deleteObat(Obat obat);
+    DtoResponse aktifObat(Obat obat);
+    DtoResponse getObatById(int id);
+
 }
 

@@ -1,34 +1,27 @@
 package id.co.project_kel2.vo;
 
-import id.co.project_kel2.model.Penjualan;
+import id.co.project_kel2.model.Transaksi;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-public class PenjualanVo
+public class TransaksiVo
 {
     private Integer id;
     private Date tanggal;
     private BigDecimal total;
-    private List<DetailPenjualanVo> details;
-    public PenjualanVo() {
+    private List<DetailTransaksiVo> details;
+    public TransaksiVo() {
     }
 
-    public PenjualanVo(Penjualan penjualan) {
+    public TransaksiVo(Transaksi penjualan) {
         this.id = penjualan.getTrs_id();
         this.tanggal = penjualan.getTrs_tanggal();
         this.total = penjualan.getTrs_total();
     }
 
 
-    public List<DetailPenjualanVo> getDetails() {
-        return details;
-    }
-
-    public void setDetails(List<DetailPenjualanVo> details) {
-        this.details = details;
-    }
 
     public Integer getId() {
         return id;

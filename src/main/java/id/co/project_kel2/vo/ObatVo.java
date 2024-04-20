@@ -6,71 +6,71 @@ import java.math.BigDecimal;
 
 public class ObatVo
 {
-    private Integer id;
-    private String nama;
-    private String kegunaan;
-    private BigDecimal harga;
-    private Integer stok;
-    private Integer status;
+    private Integer obt_id;
+    private String obt_nama;
+    private String obt_kegunaan;
+    private BigDecimal obt_hrg_jual;
+    private Integer obt_stok;
+    private Integer obt_status;
 
     // Konstruktor
     public ObatVo() {
     }
 
     public ObatVo(Obat obat) {
-        this.id = obat.getObt_id();
-        this.nama = obat.getObt_nama();
-        this.kegunaan = obat.getObt_kegunaan();
-        this.harga = obat.getObt_hrg_jual();
-        this.stok = obat.getObt_stok();
-        this.status = obat.getObt_status();
+        this.obt_id = obat.getObt_id();
+        this.obt_nama = obat.getObt_nama();
+        this.obt_kegunaan = obat.getObt_kegunaan();
+        this.obt_hrg_jual = obat.getObt_hrg_jual();
+        this.obt_stok = obat.getObt_stok();
+        this.obt_status = obat.getObt_status();
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getObt_id() {
+        return obt_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setObt_id(Integer obt_id) {
+        this.obt_id = obt_id;
     }
 
-    public String getNama() {
-        return nama;
+    public String getObt_nama() {
+        return obt_nama;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setObt_nama(String obt_nama) {
+        this.obt_nama = obt_nama;
     }
 
-    public String getKegunaan() {
-        return kegunaan;
+    public String getObt_kegunaan() {
+        return obt_kegunaan;
     }
 
-    public void setKegunaan(String kegunaan) {
-        this.kegunaan = kegunaan;
+    public void setObt_kegunaan(String obt_kegunaan) {
+        this.obt_kegunaan = obt_kegunaan;
     }
 
-    public BigDecimal getHarga() {
-        return harga;
+    public BigDecimal getObt_hrg_jual() {
+        return obt_hrg_jual;
     }
 
-    public void setHarga(BigDecimal harga) {
-        this.harga = harga;
+    public void setObt_hrg_jual(BigDecimal obt_hrg_jual) {
+        this.obt_hrg_jual = obt_hrg_jual;
     }
 
-    public Integer getStok() {
-        return stok;
+    public Integer getObt_stok() {
+        return obt_stok;
     }
 
-    public void setStok(Integer stok) {
-        this.stok = stok;
+    public void setObt_stok(Integer obt_stok) {
+        this.obt_stok = obt_stok;
     }
 
-    public Integer getStatus() {
-        return status;
+    public Integer getObt_status() {
+        return obt_status;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setObt_status(Integer obt_status) {
+        this.obt_status = obt_status;
     }
 }

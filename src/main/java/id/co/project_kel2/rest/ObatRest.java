@@ -31,13 +31,8 @@ public class ObatRest {
         return obatService.getObatActive();
     }
     @GetMapping("/getObatById/{id}")
-    public ResponseEntity<ObatVo> getObatById(@PathVariable int id) {
-        ObatVo obat = obatService.getObatById(id);
-        if (obat != null) {
-            return new ResponseEntity<>(obat, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+    public DtoResponse getObatById(@PathVariable int id) {
+        return obatService.getObatById(id);
     }
 
     @PostMapping("/saveObat")
@@ -48,15 +43,12 @@ public class ObatRest {
     public DtoResponse updateObat (@RequestBody Obat obat) {
         return obatService.updateObat (obat);
     }
-    @PostMapping("/deleteObat/{id}")
-    public ResponseEntity<String> deleteObat(@PathVariable int id) {
-        ObatVo obats = obatService.getObatById(id);
-        if (obats != null) {
-            obatService.deleteObat(id);
-            return new ResponseEntity<>(mDeleteSuccess, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(mNotFound, HttpStatus.NOT_FOUND);
-        }
-
+    @PostMapping("/deleteObat")
+    public DtoResponse deleteObat ( @RequestBody Obat obat){
+        return obatService.deleteObat(obat);
+    }
+    @PostMapping("/aktifObat")
+    public DtoResponse aktifObat ( @RequestBody Obat obat){
+        return obatService.aktifObat(obat);
     }
 }
