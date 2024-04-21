@@ -18,8 +18,8 @@ public class DetailTransaksi implements Serializable {
 
     public DetailTransaksi(){}
 
-    public DetailTransaksi(DetailTransaksiPK detailTransaksiPK, Integer jumlah_obt) {
-        this.detailTransaksiPK = detailTransaksiPK;
+    public DetailTransaksi(Integer jumlah_obt) {
+//        this.detailTransaksiPK = detailTransaksiPK;
         this.jumlah_obt = jumlah_obt;
     }
 

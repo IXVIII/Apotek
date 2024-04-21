@@ -6,6 +6,7 @@ import id.co.project_kel2.vo.TransaksiVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/penjualan")
 public class TransaksiRest {
@@ -17,10 +18,16 @@ public class TransaksiRest {
         this.penjualanService = penjualanService;
     }
 
-    /*@PostMapping("/savePenjualan")
+    @GetMapping("/getPenjualan")
+    public DtoResponse getObats() {
+        return penjualanService.getPenjualan();
+    }
+
+
+    @PostMapping("/savePenjualan")
     public DtoResponse savePenjualan(@RequestBody TransaksiVo penjualanVo){
         return penjualanService.savePenjualan(penjualanVo);
     }
     
-     */
+
 }

@@ -11,6 +11,10 @@ import static id.co.project_kel2.constant.ObatConstant.qAllDataActive;
 
 @Repository
 public interface DetailTransaksiRepository extends JpaRepository<DetailTransaksi, Integer> {
-    @Query(value = qAllDataActive, nativeQuery = true)
-    List<DetailTransaksi> findByStatus(int status);
+//    @Query(value = qAllDataActive, nativeQuery = true)
+//    List<DetailTransaksi> findByStatus(int status);
+
+//    @Query("SELECT MAX(dtr.detailTransaksiPK.trsdtl_id) + 1 FROM DetailTransaksi dtr")
+//    Integer getNextDetailId();
+
 }

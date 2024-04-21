@@ -14,8 +14,8 @@ import java.util.List;
 public class TransaksiDaoImpl implements TransaksiDao {
     @Autowired
     private TransaksiRepository penjualanRepository;
-    /*@Override
-    public List<TransaksiVo> getAllPenjualan(){
+    @Override
+    public List<TransaksiVo> getAllTransaksi(){
         Iterable<Transaksi> penjualans = penjualanRepository.findAll();
         List<TransaksiVo> penjualanVos = new ArrayList<>();
         for (Transaksi item: penjualans){
@@ -25,6 +25,17 @@ public class TransaksiDaoImpl implements TransaksiDao {
         return penjualanVos;
     }
 
-     */
+//    @Override
+//    public List<TransaksiVo> getAllTransaksi(){
+//        Iterable<Transaksi> penjualans = penjualanRepository.findAll();
+//        List<TransaksiVo> penjualanVos = new ArrayList<>();
+//        for (Transaksi item: penjualans){
+//            TransaksiVo penjualanVo = new TransaksiVo(item);
+//            penjualanVos.add(penjualanVo);
+//        }
+//        return penjualanVos;
+//    }
+
+
 
 }

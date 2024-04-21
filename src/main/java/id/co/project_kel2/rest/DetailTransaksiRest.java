@@ -6,7 +6,7 @@ import id.co.project_kel2.service.DetailTransaksiService;
 import id.co.project_kel2.vo.DetailTransaksiVoForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/detail")
 public class DetailTransaksiRest {
